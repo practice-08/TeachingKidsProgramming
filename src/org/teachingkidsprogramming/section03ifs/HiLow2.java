@@ -5,7 +5,7 @@ import java.util.Random;
 import org.teachingextensions.logo.Sound;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
-public class HiLow
+public class HiLow2
 {
   public static void main(String[] args)
   {
@@ -15,7 +15,8 @@ public class HiLow
     //int answer = (int) (Math.random() * 100 + 1);
     // System.out.println("The answer is " + answer);
     // int answer = 40;
-    for (int i = 1; i <= 8; i++)
+    int attemps = 8;
+    for (int i = 1; i <= attemps; i++)
     {
       int guess = MessageBox.askForNumericalInput("What is your guess?");
       if (guess == answer)
@@ -26,14 +27,17 @@ public class HiLow
       }
       else if (guess > answer)
       {
-        MessageBox.showMessage("Too high lol");
+        MessageBox.showMessage("Too high ");
       }
       else
       {
         MessageBox.showMessage("Too low lmao");
       }
-      if (i == 8)
+      if (i == attemps)
+      {
         MessageBox.showMessage("You've lost");
+      }
+      MessageBox.showMessage("You have " + (attemps - i) + " attemps left.");
     }
   }
 }
