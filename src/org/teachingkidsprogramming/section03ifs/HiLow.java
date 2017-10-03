@@ -26,11 +26,11 @@ public class HiLow
       }
       else if (guess > answer)
       {
-        MessageBox.showMessage("Too high lol");
+        MessageBox.showMessage("Too high ");
       }
       else
       {
-        MessageBox.showMessage("Too low lmao");
+        MessageBox.showMessage("Too low ");
       }
       if (i == 8)
         MessageBox.showMessage("You've lost");
