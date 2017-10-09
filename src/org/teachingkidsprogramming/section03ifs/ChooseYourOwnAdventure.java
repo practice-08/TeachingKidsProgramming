@@ -21,10 +21,7 @@ public class ChooseYourOwnAdventure
     if ("wake up".equalsIgnoreCase(action))
     {
       //          wakeUp (recipe below) --#2.1
-      //          ------------- Recipe for wakeUp --#2.2
-      //              Tell the user "You wake up and have a boring day. The end." --#1
-      MessageBox.showMessage("You wake up and have a boring day. The end.");
-      //          ------------- End of wakeUp recipe --#2.3
+      wakeUp();
     }
     else if ("explore".equalsIgnoreCase(action))
     {
@@ -67,6 +64,13 @@ public class ChooseYourOwnAdventure
       //         Tell the user "You don't know how to read directions. You can't play this game. The end." --#5
       //      ------------- End of endStory recipe --#6.3
     }
+  }
+  private static void wakeUp()
+  {
+    //          ------------- Recipe for wakeUp --#2.2
+    //              Tell the user "You wake up and have a boring day. The end." --#1
+    MessageBox.showMessage("You wake up and have a boring day. The end.");
+    //          ------------- End of wakeUp recipe --#2.3
   }
   private static void animateStartStory()
   {
