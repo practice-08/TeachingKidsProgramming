@@ -2,6 +2,7 @@ package org.teachingkidsprogramming.section03ifs;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
 @SuppressWarnings("unused")
 public class DeepDive03Ifs
@@ -20,7 +21,7 @@ public class DeepDive03Ifs
     String bearPoopPlace = "";
     if (true)
     {
-      bearPoopPlace = ___;
+      bearPoopPlace = "woods";
     }
     Assert.assertEquals("woods", bearPoopPlace);
   }
@@ -32,13 +33,13 @@ public class DeepDive03Ifs
     {
       dessert = "ketchup";
     }
-    Assert.assertEquals(___, dessert);
+    Assert.assertEquals("chocolate", dessert);
   }
   @Test
   public void notEverEverEver() throws Exception
   {
     String dessert = "chocolate";
-    if (!_____)
+    if (!true)
     {
       dessert = "ketchup";
     }
@@ -48,7 +49,7 @@ public class DeepDive03Ifs
   public void isThePopeCatholic() throws Exception
   {
     String pope = "";
-    if (_____)
+    if (true)
     {
       pope = "Catholic";
     }
@@ -58,7 +59,7 @@ public class DeepDive03Ifs
   public void trueOrFalse() throws Exception
   {
     String animal = "cat";
-    boolean elephant = _____;
+    boolean elephant = true;
     if (elephant)
     {
       animal = "flat " + animal;
@@ -69,7 +70,7 @@ public class DeepDive03Ifs
   public void letSleepingBabiesLie() throws Exception
   {
     String babySounds = "";
-    boolean sleeping = ______;
+    boolean sleeping = false;
     if (sleeping)
     {
       babySounds = "zzzzzzzzzzzz";
@@ -84,7 +85,7 @@ public class DeepDive03Ifs
   public void howCoachThinks() throws Exception
   {
     String coachSays = "try harder";
-    int percentEffort = ____;
+    int percentEffort = 110;
     if (percentEffort == 110)
     {
       coachSays = "good job";
@@ -95,7 +96,7 @@ public class DeepDive03Ifs
   public void lessThan() throws Exception
   {
     String modeOfTransportation = "";
-    int age = ____;
+    int age = 13;
     if (age < 16)
     {
       modeOfTransportation = "keep walking";
@@ -110,7 +111,7 @@ public class DeepDive03Ifs
   public void greaterThan() throws Exception
   {
     String kidSays = "";
-    int numberOfIceCreams = ____;
+    int numberOfIceCreams = 5;
     if (numberOfIceCreams > 4)
     {
       kidSays = "I think I'm gonna barf";
@@ -222,6 +223,64 @@ public class DeepDive03Ifs
       dessert = "ketchup";
     }
     Assert.assertEquals(___, dessert);
+  }
+  // test for Choose Your Own Adventure
+  // our very first test! :)
+  // 
+  @Test
+  public void testTest() throws Exception
+  {
+    String result = MessageBox.askForTextInput("Do you want to 'wake up' or 'explore' the dream?");
+    // test that user entered "wake up"
+    Assert.assertEquals(result, "wake up");
+  }
+  @Test
+  public void tesdtb2Test() throws Exception
+  {
+    String result = MessageBox.askForTextInput("Do you want to 'wake up' or 'explore' the dream?");
+    // test that user entered "explore"
+    Assert.assertEquals(result, "explore");
+  }
+  @Test
+  public void cyoaIncorrectInputTes() throws Exception
+  {
+    String result = MessageBox.askForTextInput("Do you want to 'wake up' or 'explore' the dream?");
+    Assert.assertEquals("", result);
+  }
+  @Test
+  public void ifStatementsAreCool() throws Exception
+  {
+    String teacherSays = "may";
+    if (false)
+    {
+      teacherSays = "can";
+    }
+    Assert.assertEquals("may", teacherSays);
+  }
+  @Test
+  public void no1Shedding() throws Exception
+  {
+    String teacherSays = "poodle";
+    if (false)
+    {
+      teacherSays = "Saint Bernard";
+    }
+    Assert.assertEquals("may", teacherSays);
+  }
+  @Test
+  public void noShedding() throws Exception
+  {
+    String eaterSays = "";
+    int peanuts = true;
+    if (peanuts != 52)
+    {
+      eaterSays = "Tastes Great!";
+    }
+    else
+    {
+      eaterSays = "I need a doctor!";
+    }
+    Assert.assertEquals("Tastes Great", eaterSays);
   }
   /**
    * Ignore the following, It's needed to run the deep dive
