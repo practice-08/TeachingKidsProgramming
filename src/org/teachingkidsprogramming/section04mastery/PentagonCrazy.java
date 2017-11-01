@@ -35,14 +35,15 @@ public class PentagonCrazy
     ColorWheel.addColor(PenColors.Purples.Orchid);
     ColorWheel.addColor(PenColors.Blues.DarkSlateBlue);
     ColorWheel.addColor(PenColors.Greens.Teal);
-    ColorWheel.addColor(PenColors.Blues.Aquamarine); // wrong, *make indigo*
+    ColorWheel.addColor(PenColors.Purples.Indigo); // wrong, *make indigo*
   }
   private static void adjustPen()
   {
     Tortoise.setPenColor(ColorWheel.getNextColor());
-    //        Increase the tortoises pen width by 1 --#15    
-    Tortoise.setPenWidth(+1);
-    //        If the tortoise's pen width is greater than 4, then --#17
-    //            Reset the pen width to 1 --#16
+    Tortoise.setPenWidth(Tortoise.getPenWidth() + 1); // wrong
+    if (Tortoise.getPenWidth() > 4)
+    {
+      Tortoise.setPenWidth(1);
+    }
   }
 }
