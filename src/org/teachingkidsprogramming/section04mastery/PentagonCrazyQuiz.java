@@ -23,6 +23,7 @@ public class PentagonCrazyQuiz extends PentagonQuizAdapter
     //  Do the following 76 times
     for (int i = 0; i < 76; i++)
     {
+      callCreateAStitch();
       //      Call sewAStitch
     }
   }
