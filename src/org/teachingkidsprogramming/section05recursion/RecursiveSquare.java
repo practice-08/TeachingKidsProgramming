@@ -19,6 +19,7 @@ public class RecursiveSquare
     //  Create the makeASquare recipe --#11.1
     //  If the current length is greater than 10 --#10.2
     //      Run the recipe moveToTheSquareStart with the current length  --#4.3
+    moveToTheSquareStart(length);
     //
     moveToTheSquareStart(length);
     //
@@ -38,23 +39,23 @@ public class RecursiveSquare
   }
   private static void moveBackToCenter(double length)
   {
-    Tortoise.setPenUp();
+    // Tortoise.setPenUp();
     Tortoise.turn(90);
     Tortoise.move(length / 2);
     Tortoise.turn(90);
     Tortoise.move(length / 2);
     Tortoise.turn(180);
-    Tortoise.setPenDown();
+    // Tortoise.setPenDown();
     //
     //
   }
   private static void moveToTheSquareStart(double length)
   {
-    Tortoise.setPenUp();
+    //  Tortoise.setPenUp();
     Tortoise.move(length / 2);
     Tortoise.turn(-90);
     Tortoise.move(length / 2);
     Tortoise.turn(180);
-    Tortoise.setPenDown();
+    //  Tortoise.setPenDown();
   }
 }
